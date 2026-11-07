@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: green-acesso-db
+    environment:
+      POSTGRES_USER: ${DB_USER:-green}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-green}
+      POSTGRES_DB: ${DB_NAME:-green_acesso}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
