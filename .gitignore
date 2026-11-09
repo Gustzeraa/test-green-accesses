@@ -3,3 +3,4 @@ dist/
 .env
 storage/boletos/*
 !storage/boletos/.gitkeep
+relatorio.pdf
